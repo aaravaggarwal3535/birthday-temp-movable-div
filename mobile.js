@@ -88,6 +88,39 @@ papers.forEach(paper => {
   p.init(paper);
 });
 
+
+function createEmojis() {
+    const emojiCount = 10;
+    const emojis = ['🎉', '❤️', '🥰', '🎂', '🎈', '✨','🎊','🥳'];
+  
+    for (let i = 0; i < emojiCount; i++) {
+      const emoji = document.createElement('span');
+      emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      emoji.style.position = 'absolute';
+      emoji.style.fontSize = '30px';
+      emoji.style.pointerEvents = 'none';
+  
+      const x = Math.random() * window.innerWidth;
+      emoji.style.left = `${x}px`;
+      emoji.style.bottom = '0px';
+  
+      document.body.appendChild(emoji);
+  
+      setTimeout(() => {
+        emoji.style.transition = 'transform 3s linear, opacity 3s linear';
+        emoji.style.transform = `translateY(-${window.innerHeight}px)`;
+        emoji.style.opacity = '0';
+      }, 50);
+  
+      setTimeout(() => {
+        document.body.removeChild(emoji);
+      }, 3050);
+    }
+  }
+  
+  setInterval(createEmojis, 1000);
+
+
 // window.onload = function() {
 //     const audio = document.getElementById('background-music');
 //     audio.volume = 0.5;

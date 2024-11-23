@@ -88,17 +88,17 @@ papers.forEach(paper => {
   p.init(paper);
 });
 
-window.onload = function() {
-    const audio = document.getElementById('background-music');
-    audio.volume = 0.5;
-    audio.play().catch(error => {  
-        console.log('Audio playback failed:', error);
-    });
-};
+// window.onload = function() {
+//     const audio = document.getElementById('background-music');
+//     audio.volume = 0.5;
+//     audio.play().catch(error => {  
+//         console.log('Audio playback failed:', error);
+//     });
+// };
 
-document.addEventListener('click', function() {
-    const audio = document.getElementById('background-music');
-    audio.play().catch(error => {
-        console.log('Audio playback failed:', error);
-    });
-});
+// document.addEventListener('click', function() {
+//     const audio = document.getElementById('background-music');
+//     audio.play().catch(error => {
+//         console.log('Audio playback failed:', error);
+//     });
+// });

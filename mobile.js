@@ -129,9 +129,9 @@ window.onload = function() {
     });
 };
 
-document.addEventListener('click', function() {
-    const audio = document.getElementById('background-music');
-    audio.play().catch(error => {
-        console.log('Audio playback failed:', error);
-    });
-});
+// document.addEventListener('click', function() {
+//     const audio = document.getElementById('background-music');
+//     audio.play().catch(error => {
+//         console.log('Audio playback failed:', error);
+//     });
+// });
